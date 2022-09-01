@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tech Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header class="col-sm-12 d-flex justify-content-between bg-light">
+        <div class="navbar d-flex justify-content-start">
+            <div class="container-fluid">
+                <h1 class="navbar-brand">The Tech Blog</h1>
+            </div>
+        </div>
+
+        <div>
+            <nav class="navbar navbar-light bg-light float-end p-3 mx-2">
+                <a href="/"><i class="fa-solid fa-house" style="padding-right: 8px;"></i>Home</a>
+                <a href="/dashboard"><i class="fa-sharp fa-solid fa-gauge-simple-high" style="padding-right: 8px;"></i>Dashboard</a>
+                {{#if logged_in}}
+                <a class="btn" href="/" id="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
+                {{else}}
+                <a class="btn" href="login"><i class="fa-solid fa-right-to-bracket" style="padding-right:8px;"></i>Login</a>
+                {{/if}}            
+            </nav>
+        </div>
+    </header>
+
+
+    <div>
+    {{{ body }}}
+    </div>
+    
+
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{else}}
+    <script src="/js/signup.js"></script>
+    <script src="/js/login.js"></script>
+    {{/if}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+
+</html>
