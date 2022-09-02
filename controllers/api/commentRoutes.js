@@ -26,7 +26,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
-// POST route to create a comment
+// POST route to create a new comment
 router.post('/', withAuth, (req, res) => {
     if (req.session) {
         Comment.create({
@@ -51,31 +51,35 @@ router.put('/:id', withAuth, (req, res) => {
         where: {
             id: req.params.id
         }
-    }).then(dbCommentData => {
+    })
+    .then(dbCommentData => {
         if(!dbCommentData) {
             res.status(404).json({ message: 'No comment found with this Id' });
             return;
         }
         res.json(dbCommentData);
-    }).catch(err => {
+    })
+    .catch(err => {
         console.log(err);
         res.status(500).json(err);
     });
 });
 
-// DELETE route to delete a comment with a specific id
+// DELETE route to delete a comment
 router.delete('/:id', withAuth, (req, res) => {
     Comment.destroy({
         where: {
             id: req.params.id
         }
-    }).then(dbCommentData => {
+    })
+    .then(dbCommentData => {
         if (!dbCommentData) {
             response.status(404).json({ message: 'No comment found with this Id' });
             return;
         }
         res.json(dbCommentData)
-    }).catch(err => {
+    })
+    .catch(err => {
         console.log(err);
         res.status(500).json(err);
     });
