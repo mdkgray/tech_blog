@@ -6,15 +6,8 @@ const { User, Post, Comment } = require('../../models');
 // GET route for all posts
 router.get('/', (req, res) => {
     Post.findAll({
-        attributes: [
-            'id',
-            'title',
-            'content',
-            'created_at'
-        ],
-        order: [
-            ['created_at', 'DESC']
-        ],
+        attributes: ['id', 'title', 'content', 'created_at'],
+        order: [ ['created_at', 'DESC'] ],
         include: [
             {
                 model: User, 
@@ -40,15 +33,8 @@ router.get('/', (req, res) => {
 // GET routes for a specific post 
 router.get('/:id', (req, res) => {
     Post.findOne({
-        where: {
-            id: req.params.id
-        },
-        attributes: [
-            'id',
-            'title',
-            'content',
-            'created_at'
-        ], 
+        where: { id: req.params.id },
+        attributes: ['id', 'title', 'content', 'created_at'], 
         include: [
             {
                 model: User, 
@@ -98,9 +84,7 @@ router.put('/:id', withAuth, (req, res) => {
         content: req.body.content
     },
     {
-        where: {
-            id: req.params.id
-        }
+        where: { id: req.params.id }
     })
     .then(dbPostData => {
         if (!dbPostData) {
@@ -118,9 +102,7 @@ router.put('/:id', withAuth, (req, res) => {
 // DELETE route to delete a post 
 router.delete('/:id', withAuth, (req, res) => {
     Post.destroy({
-        where: {
-            id: req.params.id
-        }
+        where: { id: req.params.id }
     })
     .then(dbPostData => {
         if (!dbPostData) {

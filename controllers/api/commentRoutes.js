@@ -15,9 +15,7 @@ router.get('/', (req, res) => {
 // GET route to find comment with a specific id
 router.get('/:id', (req, res) => {
     Comment.findAll({
-        where: {
-            id: req.params.id,
-        }
+        where: { id: req.params.id }
     })
     .then(dbCommentData => res.json(dbCommentData))
     .catch(err => {
@@ -48,9 +46,7 @@ router.put('/:id', withAuth, (req, res) => {
         comment_text: req.body.comment_text
     },
     {
-        where: {
-            id: req.params.id
-        }
+        where: { id: req.params.id }
     })
     .then(dbCommentData => {
         if(!dbCommentData) {
@@ -68,9 +64,7 @@ router.put('/:id', withAuth, (req, res) => {
 // DELETE route to delete a comment
 router.delete('/:id', withAuth, (req, res) => {
     Comment.destroy({
-        where: {
-            id: req.params.id
-        }
+        where: { id: req.params.id }
     })
     .then(dbCommentData => {
         if (!dbCommentData) {
