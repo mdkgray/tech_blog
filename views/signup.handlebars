@@ -1,18 +1,20 @@
-<div class="card">
-    <h3 class="card-header">Sign Up</h3>
-    <form id="signup-form" class="card-body">
-        <label class="form-label" for="username-signup">Username</label>
-        <input id="username-signup" type="text" class="form-control" />
+<div class="container d-flex justify-content-center p-3 mt-5 mb-5 col-sm-7 border border-4 rounded text-wrap bg-light text-dark">
+    <div class="card w-100">
+        <h3 class="card-header">Sign Up</h3>
+        <form id="signup-form" class="card-body">
+            <label class="form-label" for="username-signup">Username</label>
+            <input id="username-signup" type="text" class="form-control" />
 
 
-        <label class="form-label" for="password-signup">Password</label>
-        <input  id="password-signup" type="password" class="form-control" />
+            <label class="form-label" for="password-signup">Password</label>
+            <input  id="password-signup" type="password" class="form-control" placeholder="Must be more than 4 characters long"/>
 
-        <div class="form-button-layout">
-            <button type="submit" class="btn"><i class="fa fa-user-plus" style="padding-right:8px;"></i>Sign up</button>
-            <button class="btn-outline"><a class="link-blue" href="/login"><i class="fa fa-sign-in" style="padding-right:8px;"></i>Log in</a></button>
-        </div>
-    </form>
+            <div class="form-button-layout pt-2">
+                <button type="submit" class="btn"><i class="fa fa-user-plus" style="padding-right:8px;"></i>Sign up</button>
+                <button class="btn-primary btn-outline border rounded mt-1"><a href="/login"><i class="fa fa-sign-in" style="padding-right:8px;"></i>Log in</a></button>
+            </div>
+        </form>
+    </div>
 </div>
 
 <script src="/js/signup.js"></script>
