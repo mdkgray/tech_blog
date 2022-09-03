@@ -68,7 +68,7 @@ router.post('/', (req, res) => {
     })
     .catch(err => {
         console.log(err);
-        response.status(500).json(err);
+        res.status(500).json(err);
     });
 });
 
@@ -145,7 +145,7 @@ router.delete('/:id', (req, res) => {
             res.status(404).json({ message: 'User not found' });
             return;
         }
-        response.json(dbUserData);
+        res.json(dbUserData);
     })
     .catch(err => {
         console.log(err);
