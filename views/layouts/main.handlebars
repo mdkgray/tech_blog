@@ -7,8 +7,7 @@
     <title>The Tech Blog</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -22,12 +21,12 @@
 
         <div>
             <nav class="navbar navbar-light bg-light float-end p-3 mx-2">
-                <a href="/"><i class="fa-solid fa-house" style="padding-right: 8px;"></i>Home</a>
-                <a href="dashboard"><i class="fa-sharp fa-solid fa-gauge-simple-high" style="padding-right: 8px;"></i>Dashboard</a>
+                <a href="/"><i class="fa fa-home" style="padding-right: 8px;"></i>Home</a>
+                <a href="dashboard"><i class="fa fa-dashboard" style="padding-right: 8px;"></i>Dashboard</a>
                 {{#if logged_in}}
-                <a class="btn" href="/" id="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
+                <a class="btn" href="/" id="logout"><i class="fa fa-sign-out"></i>Logout</a>
                 {{else}}
-                <a class="btn" href="login"><i class="fa-solid fa-right-to-bracket" style="padding-right:8px;"></i>Login</a>
+                <a class="btn" href="login"><i class="fa fa-sign-in" style="padding-right:8px;"></i>Login</a>
                 {{/if}}            
             </nav>
         </div>
