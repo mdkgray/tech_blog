@@ -23,6 +23,16 @@ body {
     color: beige;
 }
 
+#submit-button {
+    background-color: rgb(14, 89, 132);
+    color: beige;
+}
+
+#create-post-btn {
+    background-color: rgb(14, 89, 132);
+    color: beige;
+}
+
 #new-post {
     background-color: white;
     color: floralwhite;

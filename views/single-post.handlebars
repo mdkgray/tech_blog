@@ -1,14 +1,14 @@
 {{> post-info post}}
 
 {{#if logged_in}}
-<div class="container col-sm-10 p-3 mt-3">
+<div class="container col-sm-6 p-3 mt-3">
     <div class="card bg-secondary text-white border border-4 rounded">
         <h3 class="card-header"></h3>
         <form class="card-body comment-form" id="single-post-comment">
             <label class="form-label">Leave a comment :</label>
             <input id="comment" name="comment-text" class="form-control">
             <div class="form-button-layout">
-                <button type="submit" class="btn btn-primary p-2 mt-2">Submit</button>
+                <button type="submit" id="submit-button" class="btn p-2 mt-2">Submit</button>
             </div>
         </form>
     </div>
