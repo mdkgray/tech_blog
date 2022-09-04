@@ -48,6 +48,16 @@ body {
     color: beige;
 }
 
+#login-signup-btn {
+    background-color:rgb(224, 229, 234);
+    color: beige;
+}
+
+#signup-login-btn {
+    background-color:rgb(224, 229, 234);
+    color: beige;
+}
+
 a {
     text-decoration: none;
 }
