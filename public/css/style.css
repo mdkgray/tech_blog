@@ -4,6 +4,44 @@ body {
     background-attachment: fixed;
 }
 
+#page-title {
+    text-decoration: solid;
+}
+
+#logout {
+    background-color: rgb(14, 89, 132);
+    color: beige;
+}
+
+#login {
+    background-color: rgb(14, 89, 132);
+    color: beige;
+}
+
+#signup {
+    background-color: rgb(14, 89, 132);
+    color: beige;
+}
+
+#new-post {
+    background-color: white;
+    color: floralwhite;
+}
+
+#update-post-btn {
+    background-color: rgb(14, 89, 132);
+    color: beige;
+}
+
+#delete-post-btn {
+    background-color:lightslategray;
+    color: beige;
+}
+
 a {
     text-decoration: none;
+}
+
+#dashboard-posts {
+    color: whitesmoke;
 }
