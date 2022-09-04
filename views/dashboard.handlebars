@@ -1,12 +1,14 @@
 {{#if posts.length}}
-    <div>
-        <h2>Your Posts</h2>
+    <div class="container col-sm-10 p-3 mt-4">
+        <h2 class="p-2 m-2">Your Posts</h2>
         {{#each posts as |post|}}
-            {{> dashboard-post-info post}}
+            {{> dashboard-post post}}
         {{/each}}
     </div>
 {{/if}}
 
-<button type="submit" class="btn"><a href="/dashboard/new">+ New Post</a></button>
+<div class="d-flex justify-content-center">
+    <button type="submit" class="btn"><a href="/dashboard/new">+ New Post</a></button>
+</div>
 
 <script src="/js/addPost.js"></script>
