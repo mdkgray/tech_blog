@@ -8,6 +8,16 @@ body {
     text-decoration: solid;
 }
 
+#home-nav {
+    background-color:rgb(201 211 222);
+    border-radius: 25px;
+}
+
+#dashboard-nav {
+    background-color:rgb(201 211 222);
+    border-radius: 25px;
+}
+
 #logout {
     background-color: rgb(14, 89, 132);
     color: beige;
