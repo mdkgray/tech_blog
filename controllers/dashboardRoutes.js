@@ -70,7 +70,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
 
 // GET route for new post page
 router.get('/new', (req, res) => {
-    res.render('new-post');
+    res.render('new-post', { logged_in: true });
 });
 
 module.exports = router;
