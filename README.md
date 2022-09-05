@@ -33,6 +33,8 @@ The application server will be invoked with the following command:
 
 ## Link to deployed Heroku Application
 
+[Click here to view application](https://frozen-basin-60308.herokuapp.com/)
+
 ## Screenshots
 
 ![Screenshot-1](./public/assets/screenshot1.png)
